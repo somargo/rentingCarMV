@@ -23,10 +23,11 @@ public class CarManagement {
     }
 
     // Paso posicion en lista devuelve id de car
-    public static String findCarInList(List<Car> cars, int position){
-        for (Car car : cars){
-            if (position == cars.get(car.position)) {
-                return cars.get(position).getId();
+    public static String findIndexByIdEnList(List<Car> cars, String idCar){
+
+        for (int i=0; i < cars.size(); i++){
+            if (cars.get(i).getId() == idCar) {
+                return Integer.toString(i) ;
             }
             else {
                 continue;
